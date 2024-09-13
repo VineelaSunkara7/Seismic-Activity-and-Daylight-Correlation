@@ -1,0 +1,59 @@
+---
+title: Earthquakes and Celestial Events:Exploring Global Seismic Activity and Daily Light Patterns!
+format:
+  poster-typst: 
+    size: "36x24"
+    poster-authors: "Vineela Sunkara[vs875],Karthik Narra[kn489],Mounika Konda[mk2295],"
+    departments: "MSDS program"
+    institution-logo: "/images/rutgers-logo.jpg"
+    univ-logo-column-size: "6"
+    footer-text: "Data-Wrangling"
+    footer-url: "https://github.com/stats-at-Rutgers/group-project-helloworld_3"
+    footer-emails: "vineela.sunkara@rutgers.edu karthik.narra@rutgers.edu mounika.konda@rutgers.edu"
+    footer-color: "ebcfb2"
+    keywords: ["diurnal", "Seismic", "geophysical"]
+---
+
+# Introduction
+The project aims to utilize data from the USGS Earthquakes API and the Sunrise Sunset API to explore the relationship between seismic activity and diurnal patterns. By analyzing real-time earthquake data alongside daily updates on sunrise and sunset times, the project seeks to uncover correlations or patterns between daytime, nighttime, and seismic events. This investigation aims to provide insights into the significance of diurnal variations in seismic activity, with potential implications for disaster preparedness, urban resilience planning, and broader studies in geophysics and climatology.
+
+# Dataset Overview
+The project involves gathering data from two complementary APIs: the USGS Earthquakes API and the Sunrise Sunset API. The USGS Earthquakes API provides real-time insights into global seismic activity, including earthquake magnitude, precise location coordinates, and event timestamps, aiding in ongoing monitoring and risk assessment. Conversely, the Sunrise Sunset API offers daily updates on astronomical phenomena, such as sunrise and sunset times, along with additional daylight-related data. By integrating these datasets, the project aims to provide a nuanced understanding of both seismic events and daily light patterns, enriching our comprehension of Earth's dynamic processes. This integrated approach allows for analysis of seismic events within the context of daylight patterns and astronomical phenomena, offering valuable insights into potential correlations between seismic activity and daily astronomical cycles. Through this approach, the project aims to gain deeper insights into the spatiotemporal dynamics of earthquakes and their relationship with daily astronomical variations.
+
+# Data Analysis
+### Correlation Heatmap
+{{< embed ../Final_project.ipynb#cell-dataanalysis1 >}}
+Based on the correlation coefficient of -0.657 between latitude and magnitude, there appears to be a moderate negative correlation between latitude and magnitude of earthquakes. This suggests that, in general, earthquakes with higher magnitudes tend to occur closer to the equator (lower latitudes), while earthquakes with lower magnitudes tend to occur farther from the equator (higher latitudes). However, it's important to note that correlation does not imply causation, and other factors may also influence the relationship between latitude and earthquake magnitude.
+{{< embed ../Final_project.ipynb#cell-dataanalysis2 >}}
+The earthquakes are not uniformly distributed along the latitudes. Above figure provides general distribution of
+world earthquakes in different latitude and longitude ranges. It is seen that the upper hemisphere provides
+for nearly 60% of the world earthquakes. Besides, latitude range from -200 to +500 contributes to 75% of the world earthquakes. Also the longitude range of 900
+– 1800 contributes to over 50% of total world earthquakes. This uneven distribution of earthquakes has some bearing on the outcome of various plots.
+When earthquakes are aligned to the cycle of ascending node to ascending node (AN-AN), they are serially plotted in the forward direction
+
+### Number of Earthquakes by Hour
+{{< embed ../Final_project.ipynb#cell-dataanalysis4 >}}
+
+# Data Visualizations
+### Earthquake Magnitude vs Sunrise&Sunser Hour
+{{< embed ../Final_project.ipynb#cell-datavisualizations1 >}}
+{{< embed ../Final_project.ipynb#cell-datavisualizations5 >}}
+The pair plot provides a comprehensive overview of the relationships between earthquake variables in the merged_data dataset. Each variable, including 'Root_Mean_Square', 'Depth_Minimum', 'Magnitude', and 'Significance', is represented both individually along the diagonal and pairwise in scatter plots off the diagonal.
+
+The diagonal plots show the distribution of each variable, helping us understand their range and spread. Meanwhile, the scatter plots 
+display the relationships between variables, enabling us to identify potential correlations or patterns.By examining these plots, 
+we can assess the direction, strength, and nature of relationships between variables. Additionally, outliers or unusual data points 
+that deviate from the general trend can be identified, indicating potential data errors or exceptional events.
+
+# Conclusion
+
+Through the exploration of seismic activity and diurnal patterns, our project has revealed intriguing insights into Earth's geophysical 
+processes. Analyzing real-time earthquake data alongside daily updates on sunrise and sunset times, we've uncovered potential 
+correlations and patterns between daytime, nighttime, and seismic events. Our investigation unveiled a moderate negative correlation 
+(-0.657) between latitude and earthquake magnitude, suggesting higher magnitudes tend to occur closer to the equator. Furthermore, 
+our analysis of earthquake distribution along latitudes and longitudes highlighted the uneven spatial distribution of seismic events, 
+emphasizing the importance of geographic factors in seismic risk assessment. Our data visualizations, including correlation heatmaps
+ and pair plots, provided nuanced insights into the relationships between earthquake variables, facilitating the identification of 
+ outliers and exceptional events. Overall, our project contributes to a deeper understanding of Earth's geophysical processes and 
+ underscores the significance of diurnal variations in seismic activity. By leveraging these insights, we can inform disaster 
+ preparedness strategies and urban resilience planning to build more resilient communities in the face of seismic hazards.
